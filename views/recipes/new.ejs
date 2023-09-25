@@ -1,0 +1,63 @@
+<%- include('../partials/html-head') %>
+<%- include('../partials/nav') %>
+<div>
+  <form id="add-recipe-form" action="/recipes" method="POST">
+    <div id="add-recipe-summary">
+      <h4>Add Recipe</h4>
+      <p>Welcome to your crafting page. This is your space, this is where you make the magic
+        happen, this is where you make a bunch of people happy. Make your recipe here like a 
+        CHEF, share it with your friends and other users, update and delete it whenever you please.
+      </p>
+      <hr>
+    </div>
+
+    <div id="title-description">
+      <div id="title-description-fields">
+        <div>
+          <label for="recipe-title">Recipe Title</label>
+          <input id="recipe-title" type="text" name="title" placeholder="recipe title here" required>
+        </div>
+        <div>
+          <label for="recipe-description">Description</label>
+          <input id="recipe-description" type="text" name="description" placeholder="recipe title here">
+        </div>
+      </div>
+    </div>
+
+    <!-- <div id="recipe-ingredients">
+      <h4>Ingredients</h4>
+      <p>Carefully choose the indispensable elements of your craft in this section. 
+        Be mindful of items you pick because ultimately they define the taste of the 
+        dish you end up making, and of course you want it to be tasty!
+      </p>
+      <input id="recipe-ingredient" name="ingredients" type="text" placeholder="Add your ingredients here" >
+    </div> -->
+
+    <div id="recipe-directions">
+      <h4>Directions</h4>
+      <p>Here that section where you get to reveal to the world the secrets of your craft!
+        They say good artists never reveal their tricks. But we believe differently, we believe 
+        that sharing is what empower us to receive too. Now has come your time to share the roadmap
+        to culinary perfection.
+      </p>
+      <input id="recipe-direction" name="directions" type="text" placeholder="Add a step here" >
+    </div>
+
+    <!-- <div id="public-private">
+      <h4>Make this recipe public?</h4>
+      <input type="radio" name="postType" id="public-toggle" value="public">
+      <label for="postType" ></label>
+      <div><span>Anyone who sees my profile can see this recipe</span></div>
+      <input type="radio" id="private-toggle" name="postType" value="private" >
+      <label for="private-toggle">Personal Recipes</label>
+      <div><span>Only I can see the recipe</span></div>
+    </div> -->
+
+    <div id="cancel-submit">
+      <button>Cancel</button>
+      <button type="submit">Submit Recipe</button>
+    </div>
+  </form>
+</div>
+
+<%- include('../partials/footer') %>

@@ -5,6 +5,8 @@ import * as recipesCtrl from '../controllers/recipes.js'
 const router = Router()
 
 router.get('/', isLoggedIn, recipesCtrl.index)
+router.get('/new', recipesCtrl.new)
+router.post('/', recipesCtrl.create)
 
 export {
   router
