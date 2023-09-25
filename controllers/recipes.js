@@ -1,11 +1,11 @@
-import { Profile } from "../models/profile.js";
+import { Recipe } from "../models/recipe.js";
 
 function index(req, res) {
   Profile.find({})
   .then(profiles => {
-    res.render('profiles/index', {
+    res.render('recipes/index', {
       // profiles,
-      title: 'Your Profile'
+      title: "Let's make a recipe"
     })
   })
   .catch(err => {

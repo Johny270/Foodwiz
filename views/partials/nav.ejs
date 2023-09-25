@@ -4,6 +4,10 @@
 </head>
 <body>
   <nav>
+    <div id="logo">LOGO</div>
+
+    <input type="text" placeholder="Search..." id="search-bar">
+
     <% if (user) { %>
       <a href="/auth/logout" class="right">
         <button type="submit">Logout</button>
@@ -25,5 +29,7 @@
         data-shape="rectangular"
         data-logo_alignment="left"
       ></div>
+
+      <div id="login-icon">X</div>
     <% } %>
   </nav>
