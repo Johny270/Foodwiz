@@ -17,7 +17,16 @@ function index(req, res) {
 
 function show(req, res) {
   Profile.findById(req.params.profileId)
-  .then
+  .populate('recipes')
+  .then(profile => {
+    // const isself = profile._id.equals(req.user.profile._id)
+    res.render('profiles/show', {
+      title: `${profile.name}'s profile`,
+      recipes: recipes,
+      profile,
+
+    })
+  })
 }
 
 export {
