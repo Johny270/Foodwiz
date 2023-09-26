@@ -2,6 +2,10 @@
 <%- include('../partials/nav') %>
 
 <h1><%= title %></h1>
-
+<% recipes.forEach(recipe => { %>
+  <!-- <div><%= recipe %></div> -->
+  <a href="/recipes/<%= recipe._id %>"><h3><%= recipe.title %></h3></a>
+<% }) %>
+</section>
 
 <%- include('../partials/footer') %>
