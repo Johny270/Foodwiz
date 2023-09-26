@@ -17,5 +17,16 @@
   </form>
 
 </div>
+<hr>
+<h1>Comments</h1>
+<form action="/recipes/<%= recipe._id %>/comments" method="POST">
+  <input id="recipe-comment-section" type="text" placeholder="Add a comment..." name="body">
+  <button type="submit">Post</button>
+</form>
+
+<% recipe.comments.forEach(comment => { %>
+  <div><%= comment.body %></div>
+
+<% }) %>
 
 <%- include('../partials/footer') %>

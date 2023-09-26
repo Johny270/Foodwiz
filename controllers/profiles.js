@@ -28,7 +28,6 @@ function show(req, res) {
     // const isself = profile._id.equals(req.user.profile._id)
     res.render('profiles/show', {
       title: `${profile.name}'s profile`,
-      recipes: recipes,
       profile,
 
     })

@@ -2,6 +2,13 @@ import mongoose from 'mongoose'
 
 const Schema = mongoose.Schema
 
+const commentSchema = new Schema({
+  author: {type: Schema.Types.ObjectId, ref: 'Profile'},
+  body: String,
+}, {
+  timestamps: true,
+})
+
 const recipeSchema = new Schema({
   title: String,
   description: String,
@@ -11,6 +18,7 @@ const recipeSchema = new Schema({
   // timeUnits: {type: String, enum:['mins', 'hrs', 'days']},
   // ingredients: [],
   author: {type: Schema.Types.ObjectId, ref: 'Profile'},
+  comments: [commentSchema],
 }, {
   timestamps: true
 })

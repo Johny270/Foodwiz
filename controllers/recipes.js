@@ -1,3 +1,4 @@
+import { Profile } from "../models/profile.js";
 import { Recipe } from "../models/recipe.js";
 
 function index(req, res) {
@@ -24,7 +25,6 @@ function create(req, res) {
   req.body.author = req.user.profile._id
   Recipe.create(req.body)
   .then(recipe => {
-    console.log(profile.recipes)
     res.redirect('/profiles')
   })
   .catch(err => {
@@ -37,6 +37,7 @@ function show(req, res) {
   Recipe.findById(req.params.recipeId)
   .populate('author')
   .then(recipe => {
+    console.log(typeof recipe.createdAt)
     res.render('recipes/show', {
       recipe,
       title: `${recipe.title}`
@@ -98,6 +99,25 @@ function deleteRecipe(req, res) {
   })
 }
 
+function createComment(req, res) {
+  Recipe.findById(req.params.recipeId)
+  .then(recipe => {
+    recipe.comments.push(req.body)
+    recipe.save()
+    .then(() => {
+      res.redirect(`/recipes/${recipe._id}`)
+    })
+    .catch(err => {
+      console.log(err)
+      res.redirect('/recipes')
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/recipes')
+  })
+}
+
 export {
   index,
   newRecipe as new,
@@ -105,5 +125,6 @@ export {
   show,
   edit,
   update,
-  deleteRecipe as delete
+  deleteRecipe as delete,
+  createComment
 }
