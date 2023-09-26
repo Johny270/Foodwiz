@@ -9,6 +9,7 @@ router.get('/new', recipesCtrl.new)
 router.post('/', recipesCtrl.create)
 router.get('/:recipeId', recipesCtrl.show)
 router.get('/:recipeId/edit', recipesCtrl.edit)
+router.put('/:recipeId', recipesCtrl.update)
 
 
 

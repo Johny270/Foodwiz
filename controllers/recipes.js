@@ -56,6 +56,28 @@ function edit(req, res) {
       title: `Edit ${recipe.title}`
     })
   })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/recipes')
+  })
+}
+
+function update(req, res) {
+  Recipe.findById(req.params.recipeId)
+  .then(recipe => {
+    if (recipe.author.equals(req.user.profile._id)) {
+      recipe.updateOne(req.body)
+      .then(() => {
+        res.redirect(`/recipes/${recipe._Id}`)
+      })
+    } else {
+      res.redirect('/recipes')
+    }
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect(`/recipes/${recipe._Id}`)
+  })
 }
 
 export {
@@ -63,5 +85,6 @@ export {
   newRecipe as new,
   create,
   show,
-  edit
+  edit,
+  update
 }
