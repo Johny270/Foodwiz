@@ -1,13 +1,21 @@
 import { Profile } from "../models/profile.js";
+import { Recipe } from "../models/recipe.js";
 
 function index(req, res) {
   Profile.find({})
+  // .populate('recipes')
   .then(profiles => {
     res.render('profiles/index', {
       profiles,
-      title: 'Your Profile'
+      title: 'Your Profile',
     })
   })
+  // Recipe.find({})
+  // .then(recipes => {
+  //   res.render('profiles/index', {
+  //     recipes,
+  //   })
+  // })
   .catch(err => {
     console.log(err)
     res.redirect('/')
