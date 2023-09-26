@@ -23,6 +23,7 @@ function newRecipe(req, res) {
 function create(req, res) {
   Recipe.create(req.body)
   .then(recipe => {
+    console.log(profile.recipes)
     res.redirect('/profiles')
   })
   .catch(err => {
