@@ -1,0 +1,11 @@
+<%- include('../partials/html-head') %>
+<%- include('../partials/nav') %>
+<div>
+  <h1><%= recipe.title %></h1>
+  <h5><%= recipe.createdAt %></h5>
+  <h6><%= recipe.author.name %></h6>
+  <div><%= recipe.description %></div>
+  <div><%= recipe.directions %></div>
+</div>
+
+<%- include('../partials/footer') %>

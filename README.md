@@ -10,8 +10,8 @@ Foodwiz is a recipe website dedicated to all culinary arts enthusiasts. Like mos
 
 ***
 
-- [Planning material and concept for foodwiz]()
-# [Meet the Foodwiz community at its official website]()
+- [Planning material and concept for foodwiz](https://trello.com/b/5MsnhxDY/foodwiz)
+# [Meet the Foodwiz community at its official website](https://foodwiz.fly.dev/)
 
 Create recipes, share them with your friends, family, on your social medias, to the community. Foodwiz is also, but not only, a free access to a tremendous amount of recipes from diverse cultures around the world.
 
