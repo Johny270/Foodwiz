@@ -10,6 +10,7 @@ router.post('/', recipesCtrl.create)
 router.get('/:recipeId', recipesCtrl.show)
 router.get('/:recipeId/edit', recipesCtrl.edit)
 router.put('/:recipeId', recipesCtrl.update)
+router.delete('/:recipeId', recipesCtrl.delete)
 
 
 

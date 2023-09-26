@@ -80,11 +80,30 @@ function update(req, res) {
   })
 }
 
+function deleteRecipe(req, res) {
+  Recipe.findById(req.params.recipeId)
+  .then(recipe => {
+    if (recipe.author.equals(req.user.profile._id)) {
+      recipe.deleteOne()
+      .then(() => {
+        res.redirect('/recipes')
+      })
+    } else {
+      res.redirect('/recipes')
+    }
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/recipes')
+  })
+}
+
 export {
   index,
   newRecipe as new,
   create,
   show,
   edit,
-  update
+  update,
+  deleteRecipe as delete
 }
