@@ -48,9 +48,20 @@ function show(req, res) {
   })
 }
 
+function edit(req, res) {
+  Recipe.findById(req.params.recipeId)
+  .then(recipe => {
+    res.render('recipes/edit', {
+      recipe,
+      title: `Edit ${recipe.title}`
+    })
+  })
+}
+
 export {
   index,
   newRecipe as new,
   create,
-  show
+  show,
+  edit
 }

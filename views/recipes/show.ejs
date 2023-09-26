@@ -6,6 +6,16 @@
   <h6><%= recipe.author.name %></h6>
   <div><%= recipe.description %></div>
   <div><%= recipe.directions %></div>
+
+  
+  <a href="/recipes/<%= recipe._id %>/edit">
+    <button id="edit recipe" type="submit">Edit recipe</button>
+  </a>
+  
+  <form action="/recipes/<%= recipe._id %>?_method=DELETE" method="POST">
+    <button id="Delete recipe">Delete recipe</button>
+  </form>
+
 </div>
 
 <%- include('../partials/footer') %>
