@@ -100,6 +100,8 @@ function deleteRecipe(req, res) {
 }
 
 function createComment(req, res) {
+  req.body.author = req.user.profile._id
+  console.log(req.body)
   Recipe.findById(req.params.recipeId)
   .then(recipe => {
     recipe.comments.push(req.body)
