@@ -45,7 +45,7 @@ input, textarea {
 .plus-recipe {
   width: 319px;
   height: 86px;
-  background-color: #00703c;
+  /* background-color: #00703c; */
   margin-left: 25px;
 }
 .plus-recipe h1 {
@@ -58,8 +58,10 @@ input, textarea {
   font-weight: 800;
   line-height: normal;
   z-index: 1;
-  color: #fff;
+  color: #000;
+  opacity: .7;
 }
+
 
 .plus-recipe i {
   position: relative;
@@ -81,13 +83,13 @@ input, textarea {
 }
 
 .plus-recipe div {
-  position: absolute;
-  top: 210px;
-  left: 556px;
+  position: relative;
+  top: -57px;
+  right: -38px;
   z-index: 0;
   width: 225px;
   height: 43px;
-  background-color: #98bf64;
+  background-color: #00703c;
   overflow: hidden;
 }
 
