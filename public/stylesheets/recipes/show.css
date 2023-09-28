@@ -1,0 +1,99 @@
+.show-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #d9d9d9;
+  width: 1290px;
+  margin-top: 30px;
+  color: #fff;
+}
+
+.recipe-author-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+.author-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 420px;
+  height: 595px;
+} 
+.author-links > * {
+  background-color: #606060;
+}
+.author {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 420px;
+  height: 109px;
+}
+.links {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 420px;
+  height: 306px;
+  text-align: center;
+}
+
+.recipe-container {
+  width: 855px;
+  height: 887px;
+  background-color: #606060;
+}
+
+.comment-start {
+  margin-top: 50px;
+  text-align: center;
+  color: #fff;
+  font-family: "JejuHallasan"; 
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  position: relative;
+  max-width: 350px;
+  margin: 30px auto;
+}
+.comment-start:before {
+  content: " ";
+  display: block;
+  height: 2px;
+  width: 320px;
+  position: absolute;
+  top: 50%;
+  left: -350px;
+  background: red;
+}
+
+.comment-start:after {
+  content: " ";
+  display: block;
+  height: 2px;
+  width: 320px;
+  position: absolute;
+  top: 50%;
+  right: -350px;
+  background: red;
+}
+
+.comment-section {
+  width: 855px;
+  height: 1391px;
+  background-color: #606060;
+  margin-bottom: 30px;
+}
+#delete-form{
+  display: flex;
+  justify-content: center;
+}
+#delete-recipe {
+  width: 200px;
+  height: 59px;
+}

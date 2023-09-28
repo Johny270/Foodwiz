@@ -1,6 +1,10 @@
 <%- include('../partials/html-head') %>
+<link rel="stylesheet" href="/stylesheets/recipes/show.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Aclonica&family=Jomolhari&family=Joti+One&family=Katibeh&family=Kavoon&family=Roboto+Condensed&display=swap" rel="stylesheet">
 <%- include('../partials/nav') %>
-<div>
+<!-- <div>
   <h1><%= recipe.title %></h1>
   <h5><%= recipe.createdAt.toLocaleDateString() %></h5>
   <h6><%= recipe.author.name %></h6>
@@ -28,6 +32,74 @@
 <% recipe.comments.forEach(comment => { %>
   <div><%= comment.body %></div>
 
-<% }) %>
+<% }) %> -->
+
+<div class="show-container">
+
+  <div class="recipe-author-links">
+    <div class="recipe-container">
+
+      <div class="title-ratings-comments">
+        <h1><%= recipe.title %></h1>
+        <div class="ratings-comments">
+          <div class="like-count"></div>
+          <div class="comments-count"></div>
+        </div>
+      </div>
+
+      <div class="recipe-description">
+        <p><%= recipe.description %></p>
+      </div>
+
+      <div class="recipe-picture"></div>
+
+      <div class="recipe-ingredients">
+        <p><%= recipe.ingredients %></p>
+      </div>
+
+      <div class="recipe-directions">
+        <p><%= recipe.directions %></p>
+      </div>
+
+      <div class="container-form">
+        <div class="avatar"></div>
+        <form action="/recipes/<%= recipe._id %>/comments" method="POST">
+          <textarea id="comment-form" placeholder="Add a comment..." name="body"></textarea>
+          <button type="submit">Post</button>
+        </form>
+      </div>
+
+    </div>
+
+    <div class="author-links">
+      <div class="author">
+        <p>Posted on <%= recipe.createdAt.toLocaleDateString() %> by <span><%= recipe.author.name %></span></p>
+      </div>
+      <div class="links">
+        <% if (user.profile._id.equals(recipe.author._id)) { %>
+          <a href="/recipes/<%= recipe._id %>/edit">Edit This Recipe</a>
+          <a href="/">Go Back Home</a>
+          <a href="/profiles">View Profiles</a>
+          
+        <% } %>
+        
+      </div>
+      <form id="delete-form" action="/recipes/<%= recipe._id %>?_method=DELETE" method="POST">
+        <button id="delete-recipe">Delete</button>
+      </form>
+    </div>
+  </div>
+
+  <h3 class="comment-start">Comments</h3>
+
+  <div class="comment-section">
+    <% recipe.comments.forEach(comment => { %>
+      <div>
+        <p><%= comment.body %></p>
+      </div>
+    <% }) %>
+  </div>
+
+</div>
 
 <%- include('../partials/footer') %>

@@ -9,8 +9,9 @@
 
     <div class="form-intro">
       <div class="plus-recipe">
-        <i class="fa-solid fa-plus" id="plus-sign-intro" ></i>
+        <i class="fa-solid fa-pen" id="edit-icon"></i>
         <h1>Edit This Recipe</h1>
+        <div class="that-rectangle"></div>
       </div>
       <p class="intro">This is where you make the magic happen. This is the place where you get creative and  showcase your talent of  CHEF in the kitchen</p>
     </div>
@@ -23,7 +24,7 @@
         </div>
         <div class="recipe-description">
           <h3>Description</h3>
-          <textarea name="description" placeholder="Share the story behind this CHEF D'OEUVRE of yours." maxlength="100" class="description" value="<%= recipe.description %>"></textarea>
+          <textarea name="description" placeholder="Share the story behind this CHEF D'OEUVRE of yours." maxlength="100" class="description"><%= recipe.description%></textarea>
         </div>
       </div>
       <div class="images-field">
@@ -56,7 +57,7 @@
         <p>Here is that section where you get to reveal to the world the secrets of your craft! They say good artists never reveal their tricks. But we believe differently, we believe that sharing is what empower us to receive too. Now has come your time to share to others your roadmap to culinary perfection.</p>
       </div>
       <div class="steps-input">
-        <div><h6>Step 1</h6><textarea name="directions" placeholder="e.g: Place meal in oven" value="<%= recipe.ingredients %>"></textarea></div>
+        <div><h6>Step 1</h6><textarea name="directions" placeholder="e.g: Place meal in oven" cols="10" rows="5"><%= recipe.directions %></textarea></div>
         <div><h6>Step 2</h6><textarea name="#" placeholder="e.g: Mix raw chicken in sauce"></textarea></div>
         <div><h6>Step 3</h6><textarea name="#" placeholder="e.g: List your steps here"></textarea></div>
       </div>
