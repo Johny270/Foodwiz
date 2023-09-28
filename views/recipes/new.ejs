@@ -1,27 +1,28 @@
 <%- include('../partials/html-head') %>
 <script src="https://kit.fontawesome.com/25995ada5b.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="/stylesheets/recipes/new.css">
 <%- include('../partials/nav') %>
 <div id="form-container">
   <form id="add-recipe-form" action="/recipes" method="POST">
 
     <div class="form-intro">
-      <div>
-        <i class="fa-solid fa-plus" id="plus-sign-intro"></i>
+      <div class="plus-recipe">
+        <i class="fa-solid fa-plus" id="plus-sign-intro" ></i>
         <h1>ADD A RECIPE</h1>
         <div class="green-under-intro"></div>
       </div>
-      <p class="intro">This is where you make the magic happen. This is the place where you get creative and  showcase your talent of  ‘chef ’ in the kitchen</p>
+      <p class="intro">This is where you make the magic happen. This is the place where you get creative and  showcase your talent of  CHEF in the kitchen</p>
     </div>
 
     <div class="title-description">
       <div class="title-description-fields">
         <div class="recipe-title">
           <h3>Recipe Title</h3>
-          <input type="text" name="title" placeholder="Your recipe title goes here" maxlength="50">
+          <input type="text" name="title" placeholder="Your recipe title goes here" maxlength="50" class="title">
         </div>
         <div class="recipe-description">
           <h3>Description</h3>
-          <input type="text" name="description" placeholder="Your recipe title goes here" maxlength="100">
+          <input type="text" name="description" placeholder="Share the story behind this CHEF D'OEUVRE of yours." maxlength="100" class="description">
         </div>
       </div>
       <div class="images-field">
@@ -32,15 +33,15 @@
 
     <div class="ingredients">
       <div class="ingredients-intro">
-        <h3>ingredients</h3>
+        <h3>Ingredients</h3>
         <p class="ingredients-intro">Carefully choose the indispensable elements of your craft in this section.
           Be mindful of items you pick because ultimately they define the taste of the
           dish you end up making, and of course you want it to be tasty!</p>
       </div>
       <div class="ingredients-input">
-        <div><input type="text" name="ingredients" placeholder="e.g: sugar, eggs"><div><i class="fa-solid fa-xmark"></i></div></div>
-        <div><input type="text" name="ingredients" placeholder="e.g: milk, potatoes"><div><i class="fa-solid fa-xmark"></i></div></div>
-        <div><input type="text" name="ingredients" placeholder="List your ingredients here"><div><i class="fa-solid fa-xmark"></i></div></div>
+        <div class="ingredient-input"><input type="text" name="ingredients" placeholder="e.g: sugar, eggs"><div class="delete-ingredient"><i class="fa-solid fa-xmark"></i></div></div>
+        <div class="ingredient-input"><input type="text" name="ingredients" placeholder="e.g: milk, potatoes"><div class="delete-ingredient"><i class="fa-solid fa-xmark"></i></div></div>
+        <div class="ingredient-input"><input type="text" name="ingredients" placeholder="List your ingredients here"><div class="delete-ingredient"><i class="fa-solid fa-xmark"></i></div></div>
       </div>
       <div class="ingredient-add-btn">
         <i class="fa-solid fa-plus" id="plus-sign-intro"></i>
@@ -58,25 +59,25 @@
         <div><h6>Step 2</h6><input type="text" name="directions" placeholder="e.g: Mix raw chicken in sauce"></div>
         <div><h6>Step 3</h6><input type="text" name="directions" placeholder="e.g: List your steps here"></div>
       </div>
-      <div class="ingredient-add-btn">
+      <div class="step-add-btn">
         <i class="fa-solid fa-plus" id="plus-sign-intro"></i>
-        <h6>ADD INGREDIENT</h6>
+        <h6>ADD STEP</h6>
       </div>
     </div>
 
     <div class="public-private">
       <h3>Make this recipe public?</h3>
       <div>
-      <input type="radio" name="isPublic" id="public" value="public">
+      <input type="radio" name="isPublic" id="public" value="public" >
       <label for="public">Public Recipes</label>
       <p>Show my recipe to the world.</p>
-      <input type="radio" name="isPublic" id="private" value="private">
+      <input type="radio" name="isPublic" id="private" value="private" >
       <label for="private">Personal Recipes</label>
       <p>Only I can see my recipe.</p>
       </div>
-      <div>
-        <p>Cancel</p>
-        <button>Create</button>
+      <div class="cancel-save">
+        <a href="/recipes"><p>Cancel</p></a>
+        <button type="submit">Create</button>
       </div>
     </div>
 

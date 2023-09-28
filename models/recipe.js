@@ -14,6 +14,7 @@ const recipeSchema = new Schema({
   description: String,
   // content: String,
   directions: String,
+  isPublic: String,
   // cookTime: Number,
   // timeUnits: {type: String, enum:['mins', 'hrs', 'days']},
   // ingredients: [],
