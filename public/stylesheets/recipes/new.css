@@ -30,6 +30,9 @@ h3 {
   font-family: 'Katibeh', cursive;
   font-size: 25px;
 }
+input, textarea {
+  font-size: 15px;
+}
 
 .form-intro {
   display: flex;
@@ -110,7 +113,7 @@ h3 {
   height: 198px;
   background-color: #d9d9d9;
 }
-.title-description input {
+.title-description input, textarea {
   font-family: 'Katibeh', cursive;
   margin-top: -15px;
   text-align: center;
@@ -164,7 +167,7 @@ h3 {
   font-size: 30px;
   opacity: .7;
 }
-.ingredients-input input{
+.ingredients-input input {
   width: 795px;
   height: 60px;
   background-color: #d9d9d9;
@@ -259,7 +262,7 @@ h3 {
   opacity: .7;
   margin-left: 40px;
 }
-.steps-input div input {
+.steps-input div textarea {
   width: 795px;
   height: 100px;
   background-color: #d9d9d9;

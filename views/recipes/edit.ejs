@@ -1,64 +1,87 @@
 <%- include('../partials/html-head') %>
+<link rel="stylesheet" href="/stylesheets/recipes/new.css">
 <%- include('../partials/nav') %>
 
 <h1><%= title %></h1>
-<div>
-  <form id="add-recipe-form" action="/recipes/<%= recipe._id %>?_method=PUT" method="POST">
-    <div id="add-recipe-summary">
-      <h4>Add Recipe</h4>
-      <p>Welcome to your crafting page. This is your space, this is where you make the magic
-        happen, this is where you make a bunch of people happy. Make your recipe here like a 
-        CHEF, share it with your friends and other users, update and delete it whenever you please.
-      </p>
-      <hr>
+<div id="form-container">
+  <form id="add-recipe-form" action="/recipes" method="POST">
+
+    <div class="form-intro">
+      <div class="plus-recipe">
+        <i class="fa-solid fa-plus" id="plus-sign-intro" ></i>
+        <h1>ADD A RECIPE</h1>
+        <div class="green-under-intro"></div>
+      </div>
+      <p class="intro">This is where you make the magic happen. This is the place where you get creative and  showcase your talent of  CHEF in the kitchen</p>
     </div>
 
-    <div id="title-description">
-      <div id="title-description-fields">
-        <div>
-          <label for="recipe-title">Recipe Title</label>
-          <input id="recipe-title" type="text" name="title" placeholder="recipe title here" required value="<%= recipe.title %>">
+    <div class="title-description">
+      <div class="title-description-fields">
+        <div class="recipe-title">
+          <h3>Recipe Title</h3>
+          <input type="text" name="title" placeholder="Your recipe title goes here" maxlength="50" class="title">
         </div>
-        <div>
-          <label for="recipe-description">Description</label>
-          <input id="recipe-description" type="text" name="description" placeholder="recipe title here" value="<%= recipe.description %>">
+        <div class="recipe-description">
+          <h3>Description</h3>
+          <textarea name="description" placeholder="Share the story behind this CHEF D'OEUVRE of yours." maxlength="100" class="description"></textarea>
         </div>
+      </div>
+      <div class="images-field">
+        <div class="image-box"></div>
+        <p>Your photo must be at least AxA large</p>
       </div>
     </div>
 
-    <!-- <div id="recipe-ingredients">
-      <h4>Ingredients</h4>
-      <p>Carefully choose the indispensable elements of your craft in this section. 
-        Be mindful of items you pick because ultimately they define the taste of the 
-        dish you end up making, and of course you want it to be tasty!
-      </p>
-      <input id="recipe-ingredient" name="ingredients" type="text" placeholder="Add your ingredients here" >
-    </div> -->
-
-    <div id="recipe-directions">
-      <h4>Directions</h4>
-      <p>Here that section where you get to reveal to the world the secrets of your craft!
-        They say good artists never reveal their tricks. But we believe differently, we believe 
-        that sharing is what empower us to receive too. Now has come your time to share the roadmap
-        to culinary perfection.
-      </p>
-      <input id="recipe-direction" name="directions" type="text" placeholder="Add a step here" value="<%= recipe.directions %>">
+    <div class="ingredients">
+      <div class="ingredients-intro">
+        <h3>Ingredients</h3>
+        <p class="ingredients-intro">Carefully choose the indispensable elements of your craft in this section.
+          Be mindful of items you pick because ultimately they define the taste of the
+          dish you end up making, and of course you want it to be tasty!</p>
+      </div>
+      <div class="ingredients-input">
+        <div class="ingredient-input"><input type="text" name="ingredients" placeholder="e.g: sugar, eggs"><div class="delete-ingredient"><i class="fa-solid fa-xmark"></i></div></div>
+        <div class="ingredient-input"><input type="text" name="ingredients" placeholder="e.g: milk, potatoes"><div class="delete-ingredient"><i class="fa-solid fa-xmark"></i></div></div>
+        <div class="ingredient-input"><input type="text" name="ingredients" placeholder="List your ingredients here"><div class="delete-ingredient"><i class="fa-solid fa-xmark"></i></div></div>
+      </div>
+      <div class="ingredient-add-btn">
+        <i class="fa-solid fa-plus" id="plus-sign-intro"></i>
+        <h6>ADD INGREDIENT</h6>
+      </div>
     </div>
 
-    <!-- <div id="public-private">
-      <h4>Make this recipe public?</h4>
-      <input type="radio" name="postType" id="public-toggle" value="public">
-      <label for="postType" ></label>
-      <div><span>Anyone who sees my profile can see this recipe</span></div>
-      <input type="radio" id="private-toggle" name="postType" value="private" >
-      <label for="private-toggle">Personal Recipes</label>
-      <div><span>Only I can see the recipe</span></div>
-    </div> -->
-
-    <div id="cancel-submit">
-      <button>Cancel</button>
-      <button type="submit">Edit Recipe</button>
+    <div class="directions">
+      <div class="directions-intro">
+        <h3>Directions</h3>
+        <p>Here is that section where you get to reveal to the world the secrets of your craft! They say good artists never reveal their tricks. But we believe differently, we believe that sharing is what empower us to receive too. Now has come your time to share to others your roadmap to culinary perfection.</p>
+      </div>
+      <div class="steps-input">
+        <div><h6>Step 1</h6><textarea name="directions" placeholder="e.g: Place meal in oven"></textarea></div>
+        <div><h6>Step 2</h6><textarea name="#" placeholder="e.g: Mix raw chicken in sauce"></textarea></div>
+        <div><h6>Step 3</h6><textarea name="#" placeholder="e.g: List your steps here"></textarea></div>
+      </div>
+      <div class="step-add-btn">
+        <i class="fa-solid fa-plus" id="plus-sign-intro"></i>
+        <h6>ADD STEP</h6>
+      </div>
     </div>
+
+    <div class="public-private">
+      <h3>Make this recipe public?</h3>
+      <div>
+      <input type="radio" name="isPublic" id="public" value="public" >
+      <label for="public">Public Recipes</label>
+      <p>Show my recipe to the world.</p>
+      <input type="radio" name="isPublic" id="private" value="private" >
+      <label for="private">Personal Recipes</label>
+      <p>Only I can see my recipe.</p>
+      </div>
+      <div class="cancel-save">
+        <a href="/recipes"><p>Cancel</p></a>
+        <button type="submit">Create</button>
+      </div>
+    </div>
+
   </form>
 </div>
 
