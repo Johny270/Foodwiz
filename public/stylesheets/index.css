@@ -7,8 +7,11 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
+  z-index: 1;
   width: 885px;
   height: 766px;
+  margin-top: 200px;
 }
 
 #foodwiz-community-text {
@@ -21,12 +24,14 @@
   height: 633px;
   box-shadow: 0px 4px 8px 5px rgba(0, 0, 0, 0.50);
   margin-top: 40px;
+  background-image: url("/assets/pexels-klaus-nielsen.jpg");
+  background-size: cover;
 }
 
 
 h4 {
   text-align: center;
-  color: black;
+  color: #fff;
   font-family: "JejuHallasan"; 
   font-size: 30px;
   font-style: normal;
@@ -63,7 +68,7 @@ h4 {
 
 #foodwiz-community-text p {
   text-align: center;
-  color: black;
+  color: #FFF;
   font-family: 'Jomolhari', serif;
   font-size: 23px;
   font-style: normal;
@@ -72,3 +77,54 @@ h4 {
   width: 705px;
   height: 419px;
 }
+
+
+.floating-img-1 {
+  position: relative;
+  right: 440px;
+  bottom: 240px;
+  background-color: #D9D9D9;
+  width: 460px;
+  height: 382px;
+  background-image: url('/assets/julius.jpg');
+  background-size: cover;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+
+.floating-img-2 {
+  position: relative;
+  left: 440px;
+  top: -624px;
+  background-color: #D9D9D9;
+  width: 460px;
+  height: 382px;
+  background-image: url('/assets/brooke-lark.jpg');
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.floating-img-3 {
+  position: relative;
+  left: 440px;
+  top: -1650px;
+  background-color: #D9D9D9;
+  width: 460px;
+  height: 382px;
+  background-image: url('/assets/becca-tapert.jpg');
+  background-size: cover;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+.floating-img-4 {
+  position: relative;
+  left: -440px;
+  top: -2035px;
+  background-color: #D9D9D9;
+  width: 460px;
+  height: 382px;
+  background-image: url('/assets/frank-holleman.jpg');
+  background-size: cover;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+
+
