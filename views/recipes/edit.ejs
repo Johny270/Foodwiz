@@ -1,16 +1,16 @@
 <%- include('../partials/html-head') %>
 <link rel="stylesheet" href="/stylesheets/recipes/new.css">
+<script src="https://kit.fontawesome.com/25995ada5b.js" crossorigin="anonymous"></script>
 <%- include('../partials/nav') %>
 
 <h1><%= title %></h1>
 <div id="form-container">
-  <form id="add-recipe-form" action="/recipes" method="POST">
+  <form id="add-recipe-form" action="/recipes/<%= recipe._id %>?_method=PUT" method="POST">
 
     <div class="form-intro">
       <div class="plus-recipe">
         <i class="fa-solid fa-plus" id="plus-sign-intro" ></i>
-        <h1>ADD A RECIPE</h1>
-        <div class="green-under-intro"></div>
+        <h1>Edit This Recipe</h1>
       </div>
       <p class="intro">This is where you make the magic happen. This is the place where you get creative and  showcase your talent of  CHEF in the kitchen</p>
     </div>
@@ -19,11 +19,11 @@
       <div class="title-description-fields">
         <div class="recipe-title">
           <h3>Recipe Title</h3>
-          <input type="text" name="title" placeholder="Your recipe title goes here" maxlength="50" class="title">
+          <input type="text" name="title" placeholder="Your recipe title goes here" maxlength="50" class="title" value="<%= recipe.title %>">
         </div>
         <div class="recipe-description">
           <h3>Description</h3>
-          <textarea name="description" placeholder="Share the story behind this CHEF D'OEUVRE of yours." maxlength="100" class="description"></textarea>
+          <textarea name="description" placeholder="Share the story behind this CHEF D'OEUVRE of yours." maxlength="100" class="description" value="<%= recipe.description %>"></textarea>
         </div>
       </div>
       <div class="images-field">
@@ -56,7 +56,7 @@
         <p>Here is that section where you get to reveal to the world the secrets of your craft! They say good artists never reveal their tricks. But we believe differently, we believe that sharing is what empower us to receive too. Now has come your time to share to others your roadmap to culinary perfection.</p>
       </div>
       <div class="steps-input">
-        <div><h6>Step 1</h6><textarea name="directions" placeholder="e.g: Place meal in oven"></textarea></div>
+        <div><h6>Step 1</h6><textarea name="directions" placeholder="e.g: Place meal in oven" value="<%= recipe.ingredients %>"></textarea></div>
         <div><h6>Step 2</h6><textarea name="#" placeholder="e.g: Mix raw chicken in sauce"></textarea></div>
         <div><h6>Step 3</h6><textarea name="#" placeholder="e.g: List your steps here"></textarea></div>
       </div>
@@ -78,7 +78,7 @@
       </div>
       <div class="cancel-save">
         <a href="/recipes"><p>Cancel</p></a>
-        <button type="submit">Create</button>
+        <button type="submit">Save</button>
       </div>
     </div>
 

@@ -54,7 +54,7 @@ function edit(req, res) {
   .then(recipe => {
     res.render('recipes/edit', {
       recipe,
-      title: `Edit ${recipe.title}`
+      title: `${recipe.title}`
     })
   })
   .catch(err => {

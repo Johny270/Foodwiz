@@ -1,0 +1,346 @@
+#form-container {
+  display: flex;
+  justify-content: center;
+  width: 1065px;
+  background-color: #d9d9d9;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  margin-bottom: 40px;
+}
+
+#add-recipe-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 915px;
+  background-color: #fff;
+  margin-top: 50px;
+  margin-bottom: 40px;
+  color: #000;
+}
+#add-recipe-form > * {
+  border-bottom: 2px solid green;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+h3 {
+  font-family: 'Katibeh', cursive;
+  font-size: 25px;
+}
+input, textarea {
+  font-size: 15px;
+}
+
+.form-intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 242px; 
+}
+
+.plus-recipe {
+  width: 319px;
+  height: 86px;
+  background-color: #00703c;
+  margin-left: 25px;
+}
+.plus-recipe h1 {
+  position: relative;
+  left: 40px;
+  bottom: 25px;
+  font-family: 'Kavoon', cursive;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  z-index: 1;
+  color: #fff;
+}
+
+.plus-recipe i {
+  position: relative;
+  z-index: 1;
+  left: 20px;
+  top: 20px;
+  bottom: 40px;
+  font-size: 30px;
+  color: #f25278;
+}
+.form-intro p {
+  position: relative;
+  font-family: 'Katibeh', cursive;
+  font-size: 17px;
+  line-height: normal;
+  top: 25px;
+  width: 885px;
+  padding-left: 40px;
+}
+
+.title-description {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 500px;
+}
+.title-description h3 {
+  margin-top: 30px;
+}
+
+.title-description .title {
+  width: 435px;
+  height: 89px;
+  background-color: #d9d9d9;
+}
+
+.title-description .description {
+  width: 435px;
+  height: 198px;
+  background-color: #d9d9d9;
+}
+.title-description input, textarea {
+  font-family: 'Katibeh', cursive;
+  margin-top: -15px;
+  text-align: center;
+  outline: none;
+  border: none;
+}
+
+.title-description .image-box {
+  width: 360px;
+  height: 342px;
+  background-color: #d9d9d9;
+  margin-top: 75px;
+  cursor: pointer;
+  background-image: url('/assets/your-photo-here.jpg');
+  background-size: cover;
+}
+.title-description .image-box:hover {
+  opacity: .6;
+}
+.title-description p {
+  font-size: 17px;
+  margin-left: 7%;
+  margin-top: 5px;
+  font-family: 'Katibeh', cursive;
+  opacity: .6;
+}
+
+.ingredients {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 657px;
+}
+
+.ingredients-intro {
+  height: 145px;
+
+}
+.ingredients-input {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 294px;
+}
+.ingredients-add-btn {
+  height: 82px;
+}
+
+.ingredients-input i{
+  font-size: 30px;
+  opacity: .7;
+}
+.ingredients-input input {
+  width: 795px;
+  height: 60px;
+  background-color: #d9d9d9;
+  outline: none;
+  border: none;
+  padding-left: 20px;
+}
+.ingredient-input .delete-ingredient {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  background-color: #bcc2c2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 15px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+.ingredient-input .delete-ingredient:hover {
+  opacity: .5;
+}
+
+.ingredients-input .ingredient-input {
+  display: flex;
+  flex-direction: row;
+  padding-left: 40px;
+}
+
+.ingredients .ingredients-intro {
+  padding-left: 40px;
+}
+
+.ingredients p {
+  font-family: 'Katibeh', cursive;
+  font-size: 17px;
+  margin-left: -40px;
+  width: 801px;
+}
+
+.ingredients .ingredient-add-btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 345px;
+  height: 82px;
+  border: 4px solid #d0312d;
+  margin-left: 40px;
+  border-radius: 10px;
+  font-family: 'Katibeh', cursive;
+  font-size: 25px;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.15) 4.95px 4.95px 1px;
+
+}
+.ingredients .ingredient-add-btn:hover {
+  opacity: .8;
+}
+
+.ingredients h6 {
+  opacity: .8;
+}
+
+.ingredients .ingredient-add-btn i {
+  font-size: 30px;
+  color: #d0312d;
+}
+
+.directions {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 971px;
+}
+
+.steps-input {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.steps-input div {
+  display: flex;
+  flex-direction: column;
+}
+
+.steps-input div h6 {
+  font-family: 'Katibeh', cursive;
+  font-size: 20px;
+  opacity: .7;
+  margin-left: 40px;
+}
+.steps-input div textarea {
+  width: 795px;
+  height: 100px;
+  background-color: #d9d9d9;
+  margin-top: -25px;
+  margin-left: 40px;
+  outline: none;
+  border: none;
+  padding-left: 20px;
+}
+.step-add-btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 345px;
+  height: 82px;
+  border: 4px solid #d0312d;
+  margin-left: 40px;
+  border-radius: 10px;
+  font-family: 'Katibeh', cursive;
+  font-size: 25px;
+  /* color: #000; */
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.15) 4.95px 4.95px 1px;
+}
+.directions-intro {
+  height: 140px;
+}
+
+.directions-intro p {
+  width: 795px;
+  height: 195px;
+  margin-left: 40px;
+  font-family: 'Katibeh', cursive;
+  font-size: 17px;
+}
+.directions h3 {
+  margin-left: 40px
+}
+
+.public-private {
+  display: flex;
+  flex-direction: column;
+}
+
+.public-private input {
+  transform: scale(2.5);
+  margin-left: 40px;
+}
+.public-private h3{
+  margin-left: 40px;
+}
+.public-private label {
+  font-family: 'Katibeh', cursive;
+  font-size: 20px;
+  margin-left: 20px;
+}
+.public-private p {
+  font-family: 'Katibeh', cursive;
+  font-size: 15px;
+  margin-left: 80px;
+  margin-top: -3px;
+  opacity: .6;
+}
+.public-private .cancel-save {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 50px;
+  margin-right: 35px;
+}
+.public-private .cancel-save p {
+  font-family: 'Katibeh', cursive;
+  font-size: 25px;
+  margin-top: 30px;
+  font-weight: 600;
+}
+.public-private .cancel-save button {
+  text-align: center;
+  width: 250px;
+  height: 70px;
+  background-color: #d0312d;
+  border: 4px solid #a91b0d;
+  margin-left: 40px;
+  border-radius: 10px;
+  font-family: 'Katibeh', cursive;
+  font-size: 25px;
+  cursor: pointer;
+  color: #fff;
+}
+
