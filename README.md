@@ -21,8 +21,13 @@ Create recipes, share them with your friends, family, on your social medias, to 
 
 > ### Fonts:
  - All Fonts used in this project come from Google front
+
+> ### Images and Layout:
  - The images were downloaded from [unsplash](https://unsplash.com/)
  - The design of the create recipe page is widely inspired by that of [All recipes](https://www.allrecipes.com/)
+
+ > ### Other Features:
+ - [WYSIWYG editor](https://www.tiny.cloud/) is the embedded editor I have in place of textarea
 
 
 ## Technologies Used
