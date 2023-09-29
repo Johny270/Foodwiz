@@ -42,15 +42,15 @@ Create recipes, share them with your friends, family, on your social medias, to 
 
 ***
 
-- [] Implement threads in comments
-- [] Implement a follower/following tracking system
+- [ ] Implement threads in comments
+- [ ] Implement a follower/following tracking system
 - [x] Implement rating features
-- [] Implement search and filter features
+- [ ] Implement search and filter features
 - [x] Add text editor embedded within text field
-- [] Add pictures to recipes
-- [] Diversify type post, from pure recipes and blog-type posts
-- [] Edit public profile
-- [] Correcly associate comments to profiles and vice-versa
+- [ ] Add pictures to recipes
+- [ ] Diversify type post, from pure recipes and blog-type posts
+- [ ] Edit public profile
+- [ ] Correcly associate comments to profiles and vice-versa
 
 ## Author
 
