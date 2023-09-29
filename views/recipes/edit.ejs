@@ -1,17 +1,18 @@
 <%- include('../partials/html-head') %>
-<link rel="stylesheet" href="/stylesheets/recipes/new.css">
+<link rel="stylesheet" href="/stylesheets/recipes/edit.css">
 <script src="https://kit.fontawesome.com/25995ada5b.js" crossorigin="anonymous"></script>
 <%- include('../partials/nav') %>
 
-<h1><%= title %></h1>
+<h1 class="main-title"><%= title %></h1>
+
 <div id="form-container">
   <form id="add-recipe-form" action="/recipes/<%= recipe._id %>?_method=PUT" method="POST">
 
     <div class="form-intro">
       <div class="plus-recipe">
-        <i class="fa-solid fa-pen" id="edit-icon"></i>
-        <h1>Edit This Recipe</h1>
-        <div class="that-rectangle"></div>
+        <i class="fa-solid fa-pen"></i>
+        <h1>Edit this Recipe</h1>
+        <div class="green-under-intro"></div>
       </div>
       <p class="intro">This is where you make the magic happen. This is the place where you get creative and  showcase your talent of  CHEF in the kitchen</p>
     </div>
@@ -20,11 +21,11 @@
       <div class="title-description-fields">
         <div class="recipe-title">
           <h3>Recipe Title</h3>
-          <input type="text" name="title" placeholder="Your recipe title goes here" maxlength="50" class="title" value="<%= recipe.title %>">
+          <input type="text" name="title" placeholder="Your recipe title goes here" maxlength="50" class="title" required value="<%= recipe.title %>">
         </div>
         <div class="recipe-description">
           <h3>Description</h3>
-          <textarea name="description" placeholder="Share the story behind this CHEF D'OEUVRE of yours." maxlength="100" class="description"><%= recipe.description%></textarea>
+          <textarea id="rcp-description" name="description" placeholder="Share the story behind this CHEF D'OEUVRE of yours." class="description"><%= recipe.description %></textarea>
         </div>
       </div>
       <div class="images-field">
@@ -41,9 +42,9 @@
           dish you end up making, and of course you want it to be tasty!</p>
       </div>
       <div class="ingredients-input">
-        <div class="ingredient-input"><input type="text" name="ingredients" placeholder="e.g: sugar, eggs"><div class="delete-ingredient"><i class="fa-solid fa-xmark"></i></div></div>
-        <div class="ingredient-input"><input type="text" name="ingredients" placeholder="e.g: milk, potatoes"><div class="delete-ingredient"><i class="fa-solid fa-xmark"></i></div></div>
-        <div class="ingredient-input"><input type="text" name="ingredients" placeholder="List your ingredients here"><div class="delete-ingredient"><i class="fa-solid fa-xmark"></i></div></div>
+        <div class="ingredient-input"><input type="text" name="ingredients" placeholder="e.g: sugar, eggs"><div class="delete-ingredient" value="<%= recipe.ingredients %>"><i class="fa-solid fa-xmark"></i></div></div>
+        <div class="ingredient-input"><input type="text" name="#" placeholder="e.g: milk, potatoes"><div class="delete-ingredient"><i class="fa-solid fa-xmark"></i></div></div>
+        <div class="ingredient-input"><input type="text" name="#" placeholder="List your ingredients here"><div class="delete-ingredient"><i class="fa-solid fa-xmark"></i></div></div>
       </div>
       <div class="ingredient-add-btn">
         <i class="fa-solid fa-plus" id="plus-sign-intro"></i>
@@ -57,14 +58,12 @@
         <p>Here is that section where you get to reveal to the world the secrets of your craft! They say good artists never reveal their tricks. But we believe differently, we believe that sharing is what empower us to receive too. Now has come your time to share to others your roadmap to culinary perfection.</p>
       </div>
       <div class="steps-input">
-        <div><h6>Step 1</h6><textarea name="directions" placeholder="e.g: Place meal in oven" cols="10" rows="5"><%= recipe.directions %></textarea></div>
-        <div><h6>Step 2</h6><textarea name="#" placeholder="e.g: Mix raw chicken in sauce"></textarea></div>
-        <div><h6>Step 3</h6><textarea name="#" placeholder="e.g: List your steps here"></textarea></div>
+        <div class="space-div"></div><textarea class="directions-text-area" name="directions" placeholder="e.g: Place meal in oven"><%= recipe.directions %></textarea>
       </div>
-      <div class="step-add-btn">
+      <!-- <div class="step-add-btn">
         <i class="fa-solid fa-plus" id="plus-sign-intro"></i>
         <h6>ADD STEP</h6>
-      </div>
+      </div> -->
     </div>
 
     <div class="public-private">
@@ -85,5 +84,20 @@
 
   </form>
 </div>
+
+<script>
+  tinymce.init({
+    selector: 'textarea',
+    plugins: 'ai tinycomments mentions anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount checklist mediaembed casechange export formatpainter pageembed permanentpen footnotes advtemplate advtable advcode editimage tableofcontents mergetags powerpaste tinymcespellchecker autocorrect a11ychecker typography inlinecss',
+    toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table mergetags | align lineheight | tinycomments | checklist numlist bullist indent outdent | emoticons charmap | removeformat',
+    tinycomments_mode: 'embedded',
+    tinycomments_author: 'Author name',
+    mergetags_list: [
+      { value: 'First.Name', title: 'First Name' },
+      { value: 'Email', title: 'Email' },
+    ],
+    ai_request: (request, respondWith) => respondWith.string(() => Promise.reject("See docs to implement AI Assistant")),
+  });
+</script>
 
 <%- include('../partials/footer') %>

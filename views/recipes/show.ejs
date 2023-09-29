@@ -48,17 +48,17 @@
       </div>
 
       <div class="recipe-description">
-        <p><%= recipe.description %></p>
+        <%- recipe.description %>
       </div>
 
       <div class="recipe-picture"></div>
 
       <div class="recipe-ingredients">
-        <p><%= recipe.ingredients %></p>
+        <%- recipe.ingredients %>
       </div>
 
       <div class="recipe-directions">
-        <p><%= recipe.directions %></p>
+        <%- recipe.description %>
       </div>
 
       <div class="container-form">
@@ -78,15 +78,15 @@
       <div class="links">
         <% if (user.profile._id.equals(recipe.author._id)) { %>
           <a href="/recipes/<%= recipe._id %>/edit">Edit This Recipe</a>
-          <a href="/">Go Back Home</a>
-          <a href="/profiles">View Profiles</a>
-          
         <% } %>
-        
+        <a href="/">Go Back Home</a>
+        <a href="/profiles">View Profiles</a>
       </div>
-      <form id="delete-form" action="/recipes/<%= recipe._id %>?_method=DELETE" method="POST">
-        <button id="delete-recipe">Delete</button>
-      </form>
+      <% if (user.profile._id.equals(recipe.author._id)) { %>
+        <form id="delete-form" action="/recipes/<%= recipe._id %>?_method=DELETE" method="POST">
+          <button id="delete-recipe">Delete</button>
+        </form>
+      <% } %>
     </div>
   </div>
 

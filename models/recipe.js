@@ -12,14 +12,12 @@ const commentSchema = new Schema({
 const recipeSchema = new Schema({
   title: String,
   description: String,
-  // content: String,
   directions: String,
   isPublic: String,
-  // cookTime: Number,
-  // timeUnits: {type: String, enum:['mins', 'hrs', 'days']},
-  // ingredients: [],
+  ingredients: String,
   author: {type: Schema.Types.ObjectId, ref: 'Profile'},
   comments: [commentSchema],
+  isPublic: String,
 }, {
   timestamps: true
 })

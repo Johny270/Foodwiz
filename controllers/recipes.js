@@ -25,7 +25,7 @@ function create(req, res) {
   req.body.author = req.user.profile._id
   Recipe.create(req.body)
   .then(recipe => {
-    res.redirect('/profiles')
+    res.redirect('/recipes')
   })
   .catch(err => {
     console.log(err)

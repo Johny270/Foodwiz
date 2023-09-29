@@ -1,10 +1,21 @@
+body {
+  background-color: #fff;
+}
+
+.main-title {
+  color: #000;
+}
+
 #form-container {
   display: flex;
   justify-content: center;
   width: 1065px;
-  background-color: #d9d9d9;
+  background-color: #fff;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
   margin-bottom: 40px;
+  border-left: 1px solid #989EA1;
+  border-right: 1px solid #989EA1;
+  border-top: 1px solid #989EA1;
 }
 
 #add-recipe-form {
@@ -45,7 +56,7 @@ input, textarea {
 .plus-recipe {
   width: 319px;
   height: 86px;
-  background-color: #00703c;
+  /* background-color: #00703c; */
   margin-left: 25px;
 }
 .plus-recipe h1 {
@@ -58,8 +69,10 @@ input, textarea {
   font-weight: 800;
   line-height: normal;
   z-index: 1;
-  color: #fff;
+  color: #000;
+  opacity: .7;
 }
+
 
 .plus-recipe i {
   position: relative;
@@ -70,16 +83,6 @@ input, textarea {
   font-size: 30px;
   color: #f25278;
 }
-.that-rectangle {
-  position: relative;
-  top: -57px;
-  right: -38px;
-  z-index: 0;
-  width: 225px;
-  height: 43px;
-  background-color: #00703c;
-}
-
 .form-intro p {
   position: relative;
   font-family: 'Katibeh', cursive;
@@ -88,6 +91,17 @@ input, textarea {
   top: 25px;
   width: 885px;
   padding-left: 40px;
+}
+
+.plus-recipe div {
+  position: relative;
+  top: -57px;
+  right: -38px;
+  z-index: 0;
+  width: 225px;
+  height: 43px;
+  background-color: #00703c;
+  overflow: hidden;
 }
 
 .title-description {
@@ -108,7 +122,7 @@ input, textarea {
 }
 
 .title-description .description {
-  width: 435px;
+  width: 235px;
   height: 198px;
   background-color: #d9d9d9;
 }
@@ -239,9 +253,13 @@ input, textarea {
 .directions {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-between;
   width: 100%;
-  height: 971px;
+  padding-bottom: 60px;
+  /* height: 771px; */
+}
+.directions textarea {
+  width: 50%;
 }
 
 .steps-input {
@@ -249,23 +267,20 @@ input, textarea {
   flex-direction: column;
   justify-content: space-between;
 }
+.steps-input .space-div {
+  height: 40px;
+}
 
-.steps-input div {
+/* .steps-input div {
   display: flex;
   flex-direction: column;
-}
+} */
 
-.steps-input div h6 {
-  font-family: 'Katibeh', cursive;
-  font-size: 20px;
-  opacity: .7;
-  margin-left: 40px;
-}
 .steps-input div textarea {
   width: 795px;
-  height: 100px;
+  height: 394px;
   background-color: #d9d9d9;
-  margin-top: -25px;
+  margin-top: -75px;
   margin-left: 40px;
   outline: none;
   border: none;

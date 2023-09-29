@@ -1,10 +1,16 @@
+body {
+  background-color: #fff;
+}
+
 #form-container {
   display: flex;
   justify-content: center;
   width: 1065px;
-  background-color: #d9d9d9;
+  background-color: #fff;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
   margin-bottom: 40px;
+  border-left: 1px solid #989EA1;
+  border-right: 1px solid #989EA1;
 }
 
 #add-recipe-form {
@@ -111,7 +117,7 @@ input, textarea {
 }
 
 .title-description .description {
-  width: 435px;
+  width: 235px;
   height: 198px;
   background-color: #d9d9d9;
 }
@@ -242,9 +248,13 @@ input, textarea {
 .directions {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-between;
   width: 100%;
-  height: 971px;
+  padding-bottom: 60px;
+  /* height: 771px; */
+}
+.directions textarea {
+  width: 50%;
 }
 
 .steps-input {
@@ -252,23 +262,20 @@ input, textarea {
   flex-direction: column;
   justify-content: space-between;
 }
+.steps-input .space-div {
+  height: 40px;
+}
 
-.steps-input div {
+/* .steps-input div {
   display: flex;
   flex-direction: column;
-}
+} */
 
-.steps-input div h6 {
-  font-family: 'Katibeh', cursive;
-  font-size: 20px;
-  opacity: .7;
-  margin-left: 40px;
-}
 .steps-input div textarea {
   width: 795px;
-  height: 100px;
+  height: 394px;
   background-color: #d9d9d9;
-  margin-top: -25px;
+  margin-top: -75px;
   margin-left: 40px;
   outline: none;
   border: none;
