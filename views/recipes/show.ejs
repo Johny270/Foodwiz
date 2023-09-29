@@ -3,6 +3,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Aclonica&family=Jomolhari&family=Joti+One&family=Katibeh&family=Kavoon&family=Roboto+Condensed&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/25995ada5b.js" crossorigin="anonymous"></script>
 <%- include('../partials/nav') %>
 
 <div class="show-container">
@@ -13,8 +14,13 @@
       <div class="title-ratings-comments">
         <h1><%= recipe.title %></h1>
         <div class="ratings-comments">
-          <div class="like-count"></div>
-          <div class="comments-count"></div>
+          <div class="like-count">
+            <p><i class="fa-regular fa-thumbs-up"></i> Like() </p>
+          </div>
+          <p> | </p>
+          <div class="comments-count">
+            <p> (<%= recipe.comments.length %>) Comments</p>
+          </div>
         </div>
       </div>
 
@@ -25,17 +31,24 @@
       <div class="recipe-picture"></div>
 
       <div class="recipe-ingredients">
-        <%- recipe.ingredients %>
+        <h3>Ingredients</h3>
+        <div class="ingredient-list">
+          <%- recipe.ingredients %>
+        </div>
       </div>
 
       <div class="recipe-directions">
-        <%- recipe.description %>
+        <h3>Directions</h3>
+        <div class="recipe-direction">
+          <%- recipe.description %>
+        </div>
+        
       </div>
 
       <div class="container-form">
         <div class="avatar"></div>
         <form action="/recipes/<%= recipe._id %>/comments" method="POST">
-          <textarea id="comment-form" placeholder="Add a comment..." name="body"></textarea>
+          <textarea class="comment-form" role="textbox" name="body" contenteditable placeholder="Enter a Comment"></textarea>
           <button type="submit">Post</button>
         </form>
       </div>
@@ -64,11 +77,19 @@
   <h3 class="comment-start">Comments</h3>
 
   <div class="comment-section">
-    <% recipe.comments.forEach(comment => { %>
-      <div>
-        <p><%= comment.body %></p>
-      </div>
-    <% }) %>
+    <div class="comment-card">
+      <% recipe.comments.forEach(comment => { %>
+        <div class="comm">
+          <div class="com-author-info">
+            <div class="comment-avatar">
+              <img src="<%= user.profile.avatar %>" alt="<%= user.profile.name %> avatar"/>
+            </div>
+            <p><%= user.profile.name %></p>
+          </div>
+          <p><%= comment.body %></p>
+        </div>
+      <% }) %>
+    </div>
   </div>
 
 </div>
