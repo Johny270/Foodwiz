@@ -1,6 +1,6 @@
-![Foodwiz screenshot]()
-
 # Foodwiz !
+
+![Foodwiz screenshot](./public/assets/foodwiz.png)
 
 ***
 
@@ -20,16 +20,20 @@ Create recipes, share them with your friends, family, on your social medias, to 
 ***
 
 > ### Fonts:
+ - All Fonts used in this project come from Google front
+ - The images were downloaded from [unsplash](https://unsplash.com/)
+ - The design of the create recipe page is widely inspired by that of [All recipes](https://www.allrecipes.com/)
 
 
 ## Technologies Used
 
 ***
 
-- Javascript
-- Express
+- Passport
+- Google OAuth
 - HTML
 - CSS
+- JavaScript
 - Express
 - MongoDB
 - NodeJS
@@ -40,13 +44,13 @@ Create recipes, share them with your friends, family, on your social medias, to 
 
 - [] Implement threads in comments
 - [] Implement a follower/following tracking system
-- [] Implement rating features
+- [x] Implement rating features
 - [] Implement search and filter features
-- [] Add text editor embedded within text field
-- [] Add pictures to receipes
-- [] Diversify type post, from pure receipes and blog-type posts
-- [] pop up signing form
+- [x] Add text editor embedded within text field
+- [] Add pictures to recipes
+- [] Diversify type post, from pure recipes and blog-type posts
 - [] Edit public profile
+- [] Correcly associate comments to profiles and vice-versa
 
 ## Author
 
