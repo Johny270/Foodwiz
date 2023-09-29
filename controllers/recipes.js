@@ -38,7 +38,6 @@ function show(req, res) {
   Recipe.findById(req.params.recipeId)
   .populate('author')
   .then(recipe => {
-    console.log(typeof recipe.createdAt)
     res.render('recipes/show', {
       recipe,
       title: `${recipe.title}`
