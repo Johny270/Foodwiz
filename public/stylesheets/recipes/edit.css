@@ -56,7 +56,6 @@ input, textarea {
 .plus-recipe {
   width: 319px;
   height: 86px;
-  /* background-color: #00703c; */
   margin-left: 25px;
 }
 .plus-recipe h1 {
@@ -256,7 +255,6 @@ input, textarea {
   justify-content: space-between;
   width: 100%;
   padding-bottom: 60px;
-  /* height: 771px; */
 }
 .directions textarea {
   width: 50%;
@@ -270,11 +268,6 @@ input, textarea {
 .steps-input .space-div {
   height: 40px;
 }
-
-/* .steps-input div {
-  display: flex;
-  flex-direction: column;
-} */
 
 .steps-input div textarea {
   width: 795px;
@@ -298,7 +291,6 @@ input, textarea {
   border-radius: 10px;
   font-family: 'Katibeh', cursive;
   font-size: 25px;
-  /* color: #000; */
   cursor: pointer;
   box-shadow: rgba(0, 0, 0, 0.15) 4.95px 4.95px 1px;
 }

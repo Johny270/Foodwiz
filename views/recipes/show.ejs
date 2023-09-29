@@ -4,35 +4,6 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Aclonica&family=Jomolhari&family=Joti+One&family=Katibeh&family=Kavoon&family=Roboto+Condensed&display=swap" rel="stylesheet">
 <%- include('../partials/nav') %>
-<!-- <div>
-  <h1><%= recipe.title %></h1>
-  <h5><%= recipe.createdAt.toLocaleDateString() %></h5>
-  <h6><%= recipe.author.name %></h6>
-  <div><%= recipe.description %></div>
-  <div><%= recipe.directions %></div>
-
-  <% if (user.profile._id.equals(recipe.author._id)) { %>
-    <a href="/recipes/<%= recipe._id %>/edit">
-      <button id="edit recipe" type="submit">Edit recipe</button>
-    </a>
-    
-    <form action="/recipes/<%= recipe._id %>?_method=DELETE" method="POST">
-      <button id="Delete recipe">Delete recipe</button>
-    </form>
-  <% } %>
-
-</div>
-<hr>
-<h1>Comments</h1>
-<form action="/recipes/<%= recipe._id %>/comments" method="POST">
-  <input id="recipe-comment-section" type="text" placeholder="Add a comment..." name="body">
-  <button type="submit">Post</button>
-</form>
-
-<% recipe.comments.forEach(comment => { %>
-  <div><%= comment.body %></div>
-
-<% }) %> -->
 
 <div class="show-container">
 

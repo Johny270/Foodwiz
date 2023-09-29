@@ -19,7 +19,6 @@
   flex-direction: column;
   justify-content: flex-start;
   width: 420px;
-  /* height: 595px; */
 } 
 .author-links > * {
   background-color: #606060;
