@@ -18,19 +18,13 @@
     </div>
 
     <div class="title-description">
-      <div class="title-description-fields">
-        <div class="recipe-title">
-          <h3>Recipe Title</h3>
-          <input type="text" name="title" placeholder="Your recipe title goes here" maxlength="50" class="title" required>
-        </div>
-        <div class="recipe-description">
-          <h3>Description</h3>
-          <textarea id="rcp-description" name="description" placeholder="Share the story behind this CHEF D'OEUVRE of yours." class="description"></textarea>
-        </div>
+      <div class="recipe-title">
+        <h3>Recipe Title</h3>
+        <input type="text" name="title" placeholder="Your recipe title goes here" maxlength="50" class="title" autocomplete="off" required>
       </div>
-      <div class="images-field">
-        <div class="image-box"></div>
-        <p>Your photo must be at least AxA large</p>
+      <div class="recipe-description">
+        <h3>Description</h3>
+        <textarea id="rcp-description" name="description" placeholder="Share the story behind this CHEF D'OEUVRE of yours." autocomplete="off" class="description"></textarea>
       </div>
     </div>
 
@@ -42,13 +36,7 @@
           dish you end up making, and of course you want it to be tasty!</p>
       </div>
       <div class="ingredients-input">
-        <div class="ingredient-input"><input type="text" name="ingredients" placeholder="e.g: sugar, eggs"><div class="delete-ingredient"><i class="fa-solid fa-xmark"></i></div></div>
-        <div class="ingredient-input"><input type="text" name="#" placeholder="e.g: milk, potatoes"><div class="delete-ingredient"><i class="fa-solid fa-xmark"></i></div></div>
-        <div class="ingredient-input"><input type="text" name="#" placeholder="List your ingredients here"><div class="delete-ingredient"><i class="fa-solid fa-xmark"></i></div></div>
-      </div>
-      <div class="ingredient-add-btn">
-        <i class="fa-solid fa-plus" id="plus-sign-intro"></i>
-        <h6>ADD INGREDIENT</h6>
+        <textarea class="rcp-ingredient-input" name="ingredients" placeholder="Share the story behind this CHEF D'OEUVRE of yours." autocomplete="off" class="description" ></textarea>
       </div>
     </div>
 
@@ -58,7 +46,7 @@
         <p>Here is that section where you get to reveal to the world the secrets of your craft! They say good artists never reveal their tricks. But we believe differently, we believe that sharing is what empower us to receive too. Now has come your time to share to others your roadmap to culinary perfection.</p>
       </div>
       <div class="steps-input">
-        <div class="space-div"></div><textarea class="directions-text-area" name="directions" placeholder="e.g: Place meal in oven"></textarea>
+        <textarea class="directions-text-area" name="directions" placeholder="e.g: Place meal in oven" autocomplete="off"></textarea>
       </div>
       
     </div>

@@ -1,5 +1,5 @@
-import { Profile } from "../models/profile.js";
-import { Recipe } from "../models/recipe.js";
+import { Profile } from "../models/profile.js"
+import { Recipe } from "../models/recipe.js"
 
 function index(req, res) {
   Profile.find({})
@@ -21,8 +21,11 @@ function show(req, res) {
     res.render('profiles/show', {
       title: `${profile.name}'s profile`,
       profile,
-
     })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/')
   })
 }
 

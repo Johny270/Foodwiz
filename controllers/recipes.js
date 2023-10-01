@@ -1,6 +1,6 @@
-import { populate } from "dotenv";
-import { Profile } from "../models/profile.js";
-import { Recipe } from "../models/recipe.js";
+// import { populate } from "dotenv";
+// import { Profile } from "../models/profile.js";
+import { Recipe } from "../models/recipe.js"
 
 function index(req, res) {
   Recipe.find({})
@@ -37,6 +37,12 @@ function create(req, res) {
 function show(req, res) {
   Recipe.findById(req.params.recipeId)
   .populate('author')
+  .populate({
+    path: 'comments',
+    populate: {
+      path: 'author',
+    }
+  })
   .then(recipe => {
     res.render('recipes/show', {
       recipe,
@@ -69,7 +75,7 @@ function update(req, res) {
     if (recipe.author.equals(req.user.profile._id)) {
       recipe.updateOne(req.body)
       .then(() => {
-        res.redirect(`/recipes/${recipe._Id}`)
+        res.redirect(`/recipes/${recipe._id}`)
       })
     } else {
       res.redirect('/recipes')
@@ -77,7 +83,7 @@ function update(req, res) {
   })
   .catch(err => {
     console.log(err)
-    res.redirect(`/recipes/${recipe._Id}`)
+    res.redirect('/recipes')
   })
 }
 

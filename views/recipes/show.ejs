@@ -14,10 +14,6 @@
       <div class="title-ratings-comments">
         <h1><%= recipe.title %></h1>
         <div class="ratings-comments">
-          <div class="like-count">
-            <p><i class="fa-regular fa-thumbs-up"></i> Like() </p>
-          </div>
-          <p> | </p>
           <div class="comments-count">
             <p> (<%= recipe.comments.length %>) Comments</p>
           </div>
@@ -57,7 +53,7 @@
 
     <div class="author-links">
       <div class="author">
-        <p>Posted on <%= recipe.createdAt.toLocaleDateString() %> by <span><%= recipe.author.name %></span></p>
+        <p>Posted on <%= recipe.createdAt.toLocaleDateString() %> by <a href="/profiles/<%= recipe.author._id %>"><span><%= recipe.author.name %></span></a></p>
       </div>
       <div class="links">
         <% if (user.profile._id.equals(recipe.author._id)) { %>
@@ -82,9 +78,9 @@
         <div class="comm">
           <div class="com-author-info">
             <div class="comment-avatar">
-              <img src="<%= user.profile.avatar %>" alt="<%= user.profile.name %> avatar"/>
+              <img src="<%= comment.author.avatar %>" alt="<%= comment.author.name %> avatar"/>
             </div>
-            <p><%= user.profile.name %></p>
+            <p><%= comment.author.name %></p>
           </div>
           <p><%= comment.body %></p>
         </div>

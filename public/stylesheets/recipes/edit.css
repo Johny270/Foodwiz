@@ -105,11 +105,20 @@ input, textarea {
 
 .title-description {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-evenly;
   width: 100%;
-  height: 500px;
+  padding-bottom: 40px;
+  
+  /* height: 500px; */
 }
+.title-description .recipe-title {
+  padding-left: 40px;
+}
+.title-description .recipe-description {
+  padding-left: 40px;
+}
+
 .title-description h3 {
   margin-top: 30px;
 }
@@ -118,15 +127,8 @@ input, textarea {
   width: 435px;
   height: 89px;
   background-color: #d9d9d9;
-}
-
-.title-description .description {
-  width: 235px;
-  height: 198px;
-  background-color: #d9d9d9;
-}
-.title-description input, textarea {
   font-family: 'Roboto Condensed', sans-serif;
+  font-size: 20px;
   line-height: 30px;
   margin-top: -15px;
   text-align: center;
@@ -134,25 +136,18 @@ input, textarea {
   border: none;
 }
 
-.title-description .image-box {
-  width: 360px;
-  height: 342px;
-  background-color: #d9d9d9;
-  margin-top: 75px;
-  cursor: pointer;
-  background-image: url('/assets/your-photo-here.jpg');
-  background-size: cover;
+.title-description input:hover {
+  transform: translateY(5px);
+  box-shadow: inset 0px 10px 20px 2px rgba(0, 0, 0, 0.25);
 }
-.title-description .image-box:hover {
-  opacity: .6;
+.title-description input:focus {
+  outline: 2px solid black;
+  border-radius: 10px;
+  box-shadow: inset 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
 }
-.title-description p {
-  font-size: 18px;
-  margin-left: 7%;
-  margin-top: 5px;
-  font-family: 'Roboto Condensed', sans-serif;
-  line-height: 30px;
-  opacity: .6;
+
+.title-description textarea {
+  width: 90%;
 }
 
 .ingredients {
@@ -160,49 +155,15 @@ input, textarea {
   flex-direction: column;
   justify-content: space-evenly;
   width: 100%;
-  height: 657px;
+  padding-bottom: 40px;
 }
 
 .ingredients-intro {
   height: 145px;
-  margin-bottom: 15px;
+  margin-bottom: 50px;
 }
-.ingredients-input {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 294px;
-}
-.ingredients-add-btn {
-  height: 82px;
-}
-
-.ingredients-input i{
-  font-size: 30px;
-  opacity: .7;
-}
-.ingredients-input input {
-  width: 795px;
-  height: 60px;
-  background-color: #d9d9d9;
-  outline: none;
-  border: none;
-  padding-left: 20px;
-}
-.ingredient-input .delete-ingredient {
-  width: 40px;
-  height: 40px;
-  border-radius: 100%;
-  background-color: #bcc2c2;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: 15px;
-  margin-top: 10px;
-  cursor: pointer;
-}
-.ingredient-input .delete-ingredient:hover {
-  opacity: .5;
+.ingredients textarea {
+  width: 90%;
 }
 
 .ingredients-input .ingredient-input {
@@ -224,69 +185,18 @@ input, textarea {
   margin-bottom: 10px;
 }
 
-.ingredients .ingredient-add-btn {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  width: 345px;
-  height: 82px;
-  border: 4px solid #d0312d;
-  margin-left: 40px;
-  border-radius: 10px;
-  font-family: 'Katibeh', cursive;
-  font-size: 25px;
-  cursor: pointer;
-  box-shadow: rgba(0, 0, 0, 0.15) 4.95px 4.95px 1px;
-
-}
-.ingredients .ingredient-add-btn:hover {
-  opacity: .8;
-}
-
-.ingredients h6 {
-  opacity: .8;
-}
-
-.ingredients .ingredient-add-btn i {
-  font-size: 30px;
-  color: #d0312d;
-}
-
 .directions {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   width: 100%;
-  padding-bottom: 60px;
+  padding-bottom: 40px;
 }
 .directions-intro {
   height: 140px;
   margin-bottom: 15px;
-}
-
-.directions textarea {
-  width: 50%;
-}
-
-.steps-input {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-.steps-input .space-div {
-  height: 40px;
-}
-
-.steps-input div textarea {
-  width: 795px;
-  height: 394px;
-  background-color: #d9d9d9;
-  margin-top: -75px;
-  margin-left: 40px;
-  outline: none;
-  border: none;
-  padding-left: 20px;
+  padding-bottom: 100px;
+  margin-bottom: 60px;
 }
 
 .directions-intro p {
@@ -299,6 +209,12 @@ input, textarea {
 }
 .directions h3 {
   margin-left: 40px
+}
+
+.steps-input {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .public-private {
@@ -352,4 +268,5 @@ input, textarea {
   cursor: pointer;
   color: #fff;
 }
+
 

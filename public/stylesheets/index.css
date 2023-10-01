@@ -27,7 +27,7 @@
 
 #foodwiz-community-text::after {
   content: "";
-  background-image: url("/assets/pexels-klaus-nielsen.jpg");
+  background-color: wheat;
   background-size: cover;
   opacity: .38;
   top: 0;
@@ -78,16 +78,16 @@ h4 {
 
 #foodwiz-community-text p {
   text-align: center;
-  color: #FFF;
+  color: #fff;
   font-family: 'Jomolhari', serif;
-  font-size: 23px;
+  font-size: 26px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
   width: 705px;
   height: 419px;
   margin-top: 60px;
-  text-shadow: 3px 3px 5px rgba(0, 0, 0, 1)
+  text-shadow: 5px 5px 8px rgba(0, 0, 0, 1)
 }
 
 
