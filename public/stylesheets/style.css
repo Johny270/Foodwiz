@@ -43,13 +43,6 @@ main {
   flex-direction: column;
 }
 
-/* .all-links {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
-} */
-
 .all-links {
   position: relative;
   margin: 0 auto;

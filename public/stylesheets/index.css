@@ -156,7 +156,7 @@ h4 {
   top: -1500px;
   box-shadow: rgba(224, 94, 14, 1) 0px 0px 0px 3px;
 }
-.profiles {
+.new-recipe {
   width: 345px;
   height: 81px;
   background-color: #383838;
@@ -168,12 +168,12 @@ h4 {
   opacity: .7;
   cursor: pointer;
 }
-.profiles, .all-recipes {
+.new-recipe, .all-recipes {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.profiles a {
+.new-recipe a {
   text-decoration: none;
   color: aqua;
   font-family: 'Katibeh', cursive;;

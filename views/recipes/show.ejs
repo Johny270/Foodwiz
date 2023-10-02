@@ -60,7 +60,7 @@
           <a href="/recipes/<%= recipe._id %>/edit">Edit This Recipe</a>
         <% } %>
         <a href="/">Go Back Home</a>
-        <a href="/profiles">View Profiles</a>
+        <a href="/recipes/new">Create a Recipe</a>
       </div>
       <% if (user.profile._id.equals(recipe.author._id)) { %>
         <form id="delete-form" action="/recipes/<%= recipe._id %>?_method=DELETE" method="POST">

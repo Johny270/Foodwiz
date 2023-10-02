@@ -86,7 +86,7 @@ input, textarea {
   position: relative;
   font-family: 'Roboto Condensed', sans-serif;
   line-height: 30px;
-  font-size: 18px;
+  font-size: 20px;
   top: 25px;
   width: 885px;
   padding-left: 40px;
@@ -109,8 +109,6 @@ input, textarea {
   justify-content: space-evenly;
   width: 100%;
   padding-bottom: 40px;
-  
-  /* height: 500px; */
 }
 .title-description .recipe-title {
   padding-left: 40px;
@@ -179,7 +177,7 @@ input, textarea {
 .ingredients p {
   font-family: 'Roboto Condensed', sans-serif;
   line-height: 30px;
-  font-size: 18px;
+  font-size: 20px;
   margin-left: -40px;
   width: 801px;
   margin-bottom: 10px;
@@ -205,7 +203,7 @@ input, textarea {
   margin-left: 40px;
   font-family: 'Roboto Condensed', sans-serif;
   line-height: 30px;
-  font-size: 18px;
+  font-size: 20px;
 }
 .directions h3 {
   margin-left: 40px
@@ -231,12 +229,12 @@ input, textarea {
 }
 .public-private label {
   font-family: 'Katibeh', cursive;
-  font-size: 20px;
+  font-size: 30px;
   margin-left: 20px;
 }
 .public-private p {
   font-family: 'Katibeh', cursive;
-  font-size: 15px;
+  font-size: 25px;
   margin-left: 80px;
   margin-top: -3px;
   opacity: .6;
@@ -251,12 +249,15 @@ input, textarea {
 }
 .public-private .cancel-save p {
   font-family: 'Katibeh', cursive;
-  font-size: 25px;
+  font-size: 35px;
   margin-top: 30px;
   font-weight: 600;
 }
 .public-private .cancel-save button {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 15px;
   width: 250px;
   height: 70px;
   background-color: #d0312d;
@@ -264,7 +265,7 @@ input, textarea {
   margin-left: 40px;
   border-radius: 10px;
   font-family: 'Katibeh', cursive;
-  font-size: 25px;
+  font-size: 45px;
   cursor: pointer;
   color: #fff;
 }

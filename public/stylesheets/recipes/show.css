@@ -62,6 +62,9 @@ h3 {
   font-weight: bold;
   color: #bdb76b;
 }
+.author-links span:hover {
+  opacity: .5;
+}
 
 .links {
   display: flex;
@@ -136,7 +139,6 @@ h3 {
   flex-direction: column;
   align-items: center;
   width: 855px;
-  /* height: 1391px; */
   background-color: #fff;
   margin-bottom: 30px;
 }
@@ -175,7 +177,6 @@ h3 {
   height: 161px;
   background-color: #fff;
   padding-left: 53px;
-  /* text-align: center; */
 }
 .title-ratings-comments .ratings-comments {
   width: 780px;
@@ -193,7 +194,6 @@ h3 {
 .recipe-description {
   font-size: 18px;
   width: 780px;
-  /* height: 230px; */
   background-color: #fff;
   margin-top: 20px;
   padding-left: 53px;
@@ -218,7 +218,6 @@ h3 {
   justify-content: space-between;
   align-items: center;
   width: 474px;
-  /* height: 398px; */
   background-color: #C8A951;
   opacity: .7;
   margin-top: 20px;
@@ -237,9 +236,7 @@ h3 {
 .recipe-directions {
   display: flex;
   flex-direction: column;
-  /* justify-content: space-evenly; */
   width: 780px;
-  /* height: 690px; */
   background-color: #fff;
   margin-top: 20px;
   padding-left: 53px;
@@ -269,8 +266,6 @@ h3 {
   display: block;
   width: 70%;
   font-size: 18px;
-  /* min-height: 40px;
-  line-height: 20px; */
   outline: none;
   background-color: white;
   padding-left: 10px;

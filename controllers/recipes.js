@@ -1,5 +1,4 @@
-// import { populate } from "dotenv";
-// import { Profile } from "../models/profile.js";
+import { Profile } from "../models/profile.js"
 import { Recipe } from "../models/recipe.js"
 
 function index(req, res) {
@@ -26,7 +25,12 @@ function create(req, res) {
   req.body.author = req.user.profile._id
   Recipe.create(req.body)
   .then(recipe => {
-    res.redirect('/recipes')
+    Profile.findById(req.user.profile._id)
+    .then(profile => {
+      profile.recipes.push(recipe)
+      profile.save()
+      res.redirect('/recipes')
+    })
   })
   .catch(err => {
     console.log(err)
