@@ -6,12 +6,12 @@
 <link rel="stylesheet" href="/stylesheets/recipes/new.css">
 <%- include('../partials/nav') %>
 <div id="form-container">
-  <form id="add-recipe-form" action="/recipes" method="POST">
+  <form id="add-recipe-form" action="/recipes/<%= recipe._id %>?_method=PUT" method="POST">
 
     <div class="form-intro">
       <div class="plus-recipe">
         <i class="fa-solid fa-pen" id="plus-sign-intro" ></i>
-        <h1>ADD A RECIPE</h1>
+        <h1>Edit this Recipe</h1>
         <div class="green-under-intro"></div>
       </div>
       <p class="intro">This is where you make the magic happen. This is the place where you get creative and  showcase your talent of  CHEF in the kitchen</p>
